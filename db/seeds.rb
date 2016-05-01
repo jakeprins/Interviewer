@@ -15,8 +15,10 @@ Question.create!(question: "What is Ruby?", answer: "A great language", category
 Question.create!(question: "What is an Object?", answer: "All", category: ruby)
 Question.create!(question: "What does .each mean?", answer: "A loop", category: ruby)
 
-Question.create!(question: "What is JavaScript?", answer: "An okay language", category: html)
+Question.create!(question: "What is JavaScript?", answer: "An okay language", category: javascript)
 
+Question.create!(question: "What is HTML?", answer: "A basic language", category: html)
+Question.create!(question: "What is HTML test?", answer: "A basic language test", category: html)
 
 Question.create!(question: "What is React?", answer: "A nice language", category: react)
 
