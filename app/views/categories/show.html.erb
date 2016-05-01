@@ -1,3 +1,9 @@
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+
+
+
 <h1><%= @category.name  %></h1>
 
 <h2>Here's a little talk about what Ruby is.</h2>
