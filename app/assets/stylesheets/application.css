@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+  width: 100%;
+  margin: 4px;
+  height: 100%;
+  background:radial-gradient(deepskyblue,dodgerblue)
+  
+}

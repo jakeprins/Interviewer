@@ -1,5 +1,13 @@
-<h1>Choose your language: </h1>
+<header>
+	<h1>The Interview</h1>
+</header>
 
-<% @categories.each do |category| %>
-<p><%= link_to category.name, category %></p>
-<% end %>
+
+<div class="icon">MENU
+	  <ul class="menu">
+
+	<%= render @categories %>
+
+	</ul>
+	</div>
+</div>
