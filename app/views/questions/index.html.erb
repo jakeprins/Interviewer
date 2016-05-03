@@ -4,6 +4,7 @@
 
 
 <h3 class="myButton"><%= link_to 'Back', category_path(@category.id) %></h3>
+<h3 class="myButton"><%= link_to 'Add a question!', new_category_question_path(@category.id) %></h3>
 
 
 <%= render @questions %>
