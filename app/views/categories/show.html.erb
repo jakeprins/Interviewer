@@ -2,14 +2,13 @@
     <div class="notice"><%= flash[:notice] %></div>
   <% end %>
 
+<header><h1><%= @category.name  %></h1></header>
 
+<div class="box effect1">
+  <h3>Here's a little talk about what Ruby is.
+    If you ready to start your interview please click on the start button</h3>
+</div>
 
-<h1><%= @category.name  %></h1>
-
-<h2>Here's a little talk about what Ruby is.</h2>
-
-<p>If you ready to start your interview please click on the start button</p>
-
-<h3><%= link_to 'Start', category_questions_path(@category.id) %></h3>
+<h3 class="myButton"><%= link_to 'Start', category_questions_path(@category.id) %></h3>
 
 <h3 class="myButton"><%= link_to 'Back', root_path %></h3>
