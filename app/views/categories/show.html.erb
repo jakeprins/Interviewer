@@ -7,8 +7,10 @@
 <div class="box effect1">
   <h3>Here's a little talk about what Ruby is.
     If you ready to start your interview please click on the start button</h3>
+    <div class="wrapper">
+      <div class="button"><%= link_to 'Start', category_questions_path(@category.id) %></div>
+      <div class="button"><%= link_to 'Back', root_path %></div>
+
+    </div>
+
 </div>
-
-<h3 class="myButton"><%= link_to 'Start', category_questions_path(@category.id) %></h3>
-
-<h3 class="myButton"><%= link_to 'Back', root_path %></h3>
