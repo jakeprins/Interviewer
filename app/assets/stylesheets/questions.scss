@@ -7,6 +7,11 @@ Primary style
 
 -------------------------------- */
 
+.notice {
+  font-size: 31px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
 @font-face {
   font-family: 'kievit-regular';
@@ -60,7 +65,7 @@ body.cd-overlay::after {
 }
 
 a {
-  
+
   text-decoration: none;
 }
 

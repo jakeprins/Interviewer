@@ -15,7 +15,8 @@ class QuestionsController < ApplicationController
     @question.category = @category
 
       if @question.save
-        flash[:notice] = "Thanks for adding a new question!"
+        flash[:notice] = "Thanks for adding a question! You just helped a lot of people
+        by addinng that question with an awesome answer. You must be a wonderfull person!"
         redirect_to category_questions_path(@category)
       else
         render :new
