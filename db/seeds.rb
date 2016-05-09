@@ -1,10 +1,10 @@
 print "Seeding standard categories... "
 
 
-ruby = Category.create!(name: 'Ruby')
-javascript = Category.create!(name: 'JavaScript')
-react = Category.create!(name: 'React')
-html = Category.create!(name: 'HTML')
+ruby = Category.create!(name: 'Ruby', description: "Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.")
+javascript = Category.create!(name: 'JavaScript', description: "JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript language specification. Alongside HTML and CSS, it is one of the three core technologies of World Wide Web content production; the majority of websites employ it and it is supported by all modern Web browsers without plug-ins.")
+react = Category.create!(name: 'React', description: "React is an open-source JavaScript library providing a view for data rendered as HTML. React views are typically rendered using components that contain additional components specified as custom HTML tags. React promises programmers a model in which subcomponents cannot directly affect enclosing components, efficient updating of the HTML document when data changes, and a clean separation between components on a modern single-page application.")
+html = Category.create!(name: 'HTML', description: "HyperText Markup Language, commonly abbreviated as HTML, is the standard markup language used to create web pages. Along with CSS, and JavaScript, HTML is a cornerstone technology used to create web pages,[1] as well as to create user interfaces for mobile and web applications. Web browsers can read HTML files and render them into visible or audible web pages.")
 
 puts "seeded #{Category.count} categories!"
 
@@ -12,13 +12,12 @@ print "Seeding some questions... "
 
 
 Question.create!(question: "What is an object?", answer: "Textbook answer here is that an object is an instance of a class and has state, behavior, and identity. In a plain text example, you can say that a truck and a car are both objects of the class Vehicle, or that apple and pear are both objects of the class Fruit.", category: ruby)
-Question.create!(question: "How does a symbol differ from a string?", answer: "Short answer: symbols are immutable and reusable, retaining the same object_id.", category: ruby)
-Question.create!(question: "What is Ruby Gems?", answer: "Ruby Gem is a software package, commonly called a “gem”. Gem contains a packaged Ruby application or library. The Ruby Gems software itself allows you to easily download, install and manipulate gems on your system.", category: ruby)
-Question.create!(question: "What is Gemfile and Gemfile.lock?", answer: "The Gemfile is where you specify which gems you want to use, and lets you specify which versions. The Gemfile.lock file is where Bundler records the exact versions that were installed. This way, when the same library/project is loaded on another machine, running bundle install will look at the Gemfile.lock and install the exact same versions, rather than just using the Gemfile and installing the most recent versions. (Running different versions on different machines could lead to broken tests, etc.) You shouldn’t ever have to directly edit the lock file.", category: ruby)
-Question.create!(question: "What is Session and Cookies?", answer: "Session: are used to store user information on the server side.
-cookies: are used to store information on the browser side or we can say client side
+Question.create!(question: "How does a symbol differ from a string?", answer: "Symbols are immutable and reusable, retaining the same object_id.", category: ruby)
+Question.create!(question: "What are Ruby Gems?", answer: "Ruby Gem is a software package, commonly called a “gem”. Gem contains a packaged Ruby application or library. The Ruby Gems software itself allows you to easily download, install and manipulate gems on your system.", category: ruby)
+Question.create!(question: "What are Sessions and Cookies?", answer: "Sessions are used to store user information on the server side.
+Cookies are used to store information on the browser side or we can say client side
 Session : say session[:user] = “srikant” it remains when the browser is not closed", category: ruby)
-Question.create!(question: "What things can we define in the model?", answer: "There are lot of things you can define in models few are:
+Question.create!(question: "What can we define in the model?", answer: "There are lot of things you can define in models few are:
 1. Validations (like validates_presence_of, numeracility_of, format_of etc.)
 2. Relationships(like has_one, has_many, HABTM etc.)
 3. Callbacks(like before_save, after_save, before_create etc.)
