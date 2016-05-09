@@ -5,8 +5,8 @@
 <header><h1><%= @category.name  %></h1></header>
 
 <div class="box effect1">
-  <h3>Here's a little talk about what Ruby is.
-    If you ready to start your interview please click on the start button</h3>
+  <h2><%= @category.description  %></h2>
+  <h3>If you ready to start to prepare for your job interview please click on the start button</h3>
     <div class="wrapper">
       <div class="button"><%= link_to 'Start', category_questions_path(@category.id) %></div>
       <div class="button"><%= link_to 'Back', root_path %></div>
