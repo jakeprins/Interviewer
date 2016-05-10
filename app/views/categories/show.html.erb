@@ -3,14 +3,16 @@
   <% end %>
 
 <header><h1><%= @category.name  %></h1></header>
+<div class="wrapper">
+  <div class="button"><%= link_to 'Back', root_path %></div>
+</div>
+
 
 <div class="box effect1">
   <h2><%= @category.description  %></h2>
   <h3>If you ready to start to prepare for your job interview please click on the start button</h3>
-    <div class="wrapper">
+
+  <div class="startButton">
       <div class="button"><%= link_to 'Start', category_questions_path(@category.id) %></div>
-      <div class="button"><%= link_to 'Back', root_path %></div>
-
-    </div>
-
+  </div>
 </div>

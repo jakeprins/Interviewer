@@ -45,6 +45,16 @@ $color: #4EB1BA;
   }
 }
 
+.startButton {
+  position: relative;
+  display: block;
+  margin: auto;
+  padding-left: 42%;
+  padding-right: 42%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 
 @import "compass/css3";
 
