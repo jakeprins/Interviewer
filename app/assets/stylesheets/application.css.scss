@@ -14,10 +14,17 @@
  *= require_self
  */
 
+
 html {
   width: 100%;
   margin: 4px;
   height: 100%;
   background:radial-gradient(#323c46, #222930)
 
+}
+
+.notice {
+  font-size: 31px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
