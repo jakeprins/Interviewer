@@ -1,8 +1,6 @@
 <header>
 	<h1>The Interview</h1>
-	<h1>Prepare for job interviews as a junior webdeveloper</h1>
 </header>
-
 
 <% if flash[:notice] %>
 	<div id="container">
@@ -12,11 +10,8 @@
 	</div>
 <% end %>
 
-
-
 <div class="wrapper">
 	<div class="button"><%= link_to 'Add subject', new_category_path %></div>
-
 		<% if !user_signed_in? %>
 			<div class="button"><%= link_to 'Log In', new_user_session_path %></div>
 		<% else %>
@@ -26,11 +21,12 @@
 	</div>
 </div>
 
+<div class="indexTitle">
+	<h1>Prepare for job interviews as a junior webdeveloper</h1>
+</div>
+
 <div class="icon">SUBJECTS
-	  <ul class="menu">
-
-	<%= render @categories %>
-
+  <ul class="menu">
+		<%= render @categories %>
 	</ul>
-	</div>
 </div>
