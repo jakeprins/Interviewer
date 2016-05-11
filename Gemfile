@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "factory_girl_rails", "~> 4.0"
 gem 'devise'
 gem "compass-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
