@@ -1,9 +1,9 @@
 <div class="login-page">
   <div class="form">
     <%= form_for [@category, @question] do |f| %>
-
-        <%= f.hidden_field :category_id, :value => @question.category.id%>
-
+      <%= f.hidden_field :category_id, :value => @question.category.id%>
+      <%= f.error_messages %>
+      
       <form class="register-form">
         <div class="form-group">
            <%= f.text_field :question, class: "form-control", placeholder: "Question" %>

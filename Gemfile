@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "dynamic_form"
 gem "factory_girl_rails", "~> 4.0"
 gem 'devise'
 gem "compass-rails"

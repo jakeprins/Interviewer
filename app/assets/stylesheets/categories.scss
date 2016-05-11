@@ -16,7 +16,7 @@ $color: #4EB1BA;
   text-decoration: none;
   color: $color;
   border: 2px solid $color;
-  font-size: 24px;
+  font-size: 20px;
   display: inline-block;
   border-radius: 0.3em;
   transition: all 0.2s ease-in-out;
@@ -43,16 +43,6 @@ $color: #4EB1BA;
      transition: all 0.5s ease-in-out;
     }
   }
-}
-
-.startButton {
-  position: relative;
-  display: block;
-  margin: auto;
-  padding-left: 42%;
-  padding-right: 42%;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 
@@ -155,12 +145,14 @@ $menu-position: (($menu-size * 2) - $icon-size) / -2;
 /* Just CodePen layout stuff: */ body,a,ul,li{margin:5;outline:0;padding:0;list-style:none}html,body{height:100%;min-height:$menu-size*2}body{font-family:sans-serif;
 background:radial-gradient(#323c46, #222930);transform:translate3d(0,0,0)}.icon{top:50%;margin-top:$icon-size/-2;bottom:50%;margin-top:$icon-size/-2}
 
-
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200);
 .color {
   text-align:center;
 	position:relative;
   padding-bottom: 30px;
   color: #CC4331;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 200;
 }
 .box h2{
   text-align:center;
@@ -168,13 +160,15 @@ background:radial-gradient(#323c46, #222930);transform:translate3d(0,0,0)}.icon{
   padding-top: 30px;
   padding-left: 10px;
   padding-right:10px;
+  font-family: "Exo 2", sans-serif;
+
 
 }
 .box {
 	width:70%;
 	height:auto;
 	background:#FFF;
-	margin:40px auto;
+	margin:30px auto;
 }
 
 .wrapper {
@@ -209,7 +203,7 @@ $bg_shadow: rgba(0,0,0,0.4);
   left: 50%;
   width: $width;
   height: $height;
-  margin-top: (-$height)/2;
+  margin-top: (-$height)/1;
   margin-left: (-$width)/2;
 }
 
@@ -219,6 +213,7 @@ html {
 }
 
 .startbutton {
+  margin: 20px;
   display: block;
   font-size: $font_size;
   text-align: center;
@@ -242,7 +237,7 @@ html {
       0 5px 5px 1px $bg_shadow);
   }
   &:active {
-    margin-top: (-$height)/2 + 4;
+    margin-top: (-$height)/1 + 4;
     @include box-shadow(none);
   }
 }
