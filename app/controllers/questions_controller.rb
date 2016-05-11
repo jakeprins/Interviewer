@@ -11,14 +11,13 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.create!( question_params )
+    @question = Question.new( question_params )
     @question.category = @category
-
       if @question.save
         flash[:notice] = "Thanks for adding that great new question. You must be so awesome!"
         redirect_to category_questions_path(@category)
       else
-        render :new
+        render :new, notice: @question.errors.full_messages
       end
   end
 

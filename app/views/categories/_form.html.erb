@@ -1,7 +1,7 @@
 <div class="login-page">
   <div class="form">
     <%= form_for @category do |f| %>
-
+    <%= f.error_messages %>
     <form class="register-form">
       <div class="form-group">
         <%= f.text_field :name, class: "form-control", placeholder: "Name of subject" %>
