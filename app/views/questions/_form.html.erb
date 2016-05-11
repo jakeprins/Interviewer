@@ -1,19 +1,24 @@
-<%= form_for [@category, @question] do |f| %>
+<div class="login-page">
+  <div class="form">
+    <%= form_for [@category, @question] do |f| %>
 
-    <%= f.hidden_field :category_id, :value => @question.category.id%>
+        <%= f.hidden_field :category_id, :value => @question.category.id%>
 
-    <div class="form-group">
-       <%= f.label :question %>
-       <%= f.text_field :question, class: "form-control", placeholder: "Question.. " %>
-    </div>
+      <form class="register-form">
+        <div class="form-group">
+           <%= f.text_field :question, class: "form-control", placeholder: "Question" %>
+        </div>
 
-    <div class="form-group">
-       <%= f.label :answer %>
-       <%= f.text_field :answer, class: "form-control", placeholder: "Answer... "   %>
-    </div>
+        <div class="form-group">
+           <%= f.text_field :answer, class: "form-control", placeholder: "Answer"   %>
+        </div>
 
+        <div class="actions">
+          <%= f.submit "Add to subjects", class: "button" %>
+        </div>
 
+    <% end %>
 
-    <%= f.submit  %>
-
-<% end %>
+    </form>
+  </div>
+</div>
