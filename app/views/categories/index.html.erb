@@ -1,6 +1,18 @@
 <header>
 	<h1>The Interview</h1>
 </header>
+
+
+<% if flash[:notice] %>
+	<div id="container">
+		<div id="success">
+    	<%= flash[:notice] %>
+	  </div>
+	</div>
+<% end %>
+
+
+
 <div class="wrapper">
 	<div class="button"><%= link_to 'Add subject', new_category_path %></div>
 

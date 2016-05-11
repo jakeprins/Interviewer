@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.create!( category_params )
       if @category.save
-        flash[:notice] = "Thanks for adding a new subject! Select your subject to add a Q&A."
+        flash[:notice] = "Thanks for being so awesome! Select your new subject and add some Q&A's to that baby."
         redirect_to root_path
       else
         render :new

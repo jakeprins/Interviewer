@@ -7,11 +7,6 @@ Primary style
 
 -------------------------------- */
 
-.notice {
-  font-size: 31px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
 
 @font-face {
   font-family: 'kievit-regular';
@@ -33,7 +28,7 @@ Primary style
 
 body {
   font-size: 100%;
-  font-family: 'Questrial', sans-serif;
+  font-family: 'Muli', sans-serif;
   color: #4e5359;
   background-color: #f3f3f5;
 }
@@ -87,7 +82,7 @@ header {
   line-height: 180px;
   text-align: center;
   background-color: #4EB1BA;
-  padding-bottom: 20px;
+
 }
 header h1 {
   color: #ffffff;

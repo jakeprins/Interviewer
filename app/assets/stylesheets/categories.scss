@@ -156,13 +156,6 @@ $menu-position: (($menu-size * 2) - $icon-size) / -2;
 background:radial-gradient(#323c46, #222930);transform:translate3d(0,0,0)}.icon{top:50%;margin-top:$icon-size/-2;bottom:50%;margin-top:$icon-size/-2}
 
 
-.box h3{
-  text-align:center;
-	position:relative;
-	top:10px;
-  margin: 5px;
-  color: #CC4331;
-}
 .color {
   text-align:center;
 	position:relative;
@@ -173,6 +166,8 @@ background:radial-gradient(#323c46, #222930);transform:translate3d(0,0,0)}.icon{
   text-align:center;
 	position:relative;
   padding-top: 30px;
+  padding-left: 10px;
+  padding-right:10px;
 
 }
 .box {
@@ -249,5 +244,45 @@ html {
   &:active {
     margin-top: (-$height)/2 + 4;
     @include box-shadow(none);
+  }
+}
+
+// colors
+$red: #f55e5e;
+$green: #57e38f;
+$whiteish: #fbfbfb;
+
+
+
+#container {
+  width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+
+#error, #success {
+  width: 800px;
+  height: 80px;
+  margin: 0 20px;
+  padding: 30px;
+  display: inline-block;
+  vertical-align: top;
+
+  border-radius: 5px;
+  color: $whiteish;
+
+  h3 {
+    font-size: 30px;;
+    margin-bottom: 10px;
+  }
+}
+
+#success {
+  background-color: #4EB1BA;
+
+  h3 {
+    color: darken($green, 30);
+    text-shadow: 0 0 2px lighten($green, 30);
   }
 }
