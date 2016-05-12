@@ -1,0 +1,981 @@
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200);
+@keyframes sheen {
+  0% {
+    transform: skewY(-45deg) translateX(0);
+  }
+  100% {
+    transform: skewY(-45deg) translateX(12.5em);
+  }
+}
+/* line 13, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.button {
+  padding: 0.75em 2em;
+  text-align: center;
+  text-decoration: none;
+  color: #4EB1BA;
+  border: 2px solid #4EB1BA;
+  font-size: 20px;
+  display: inline-block;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+/* line 25, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.button:before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 3em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -4.5em;
+  transform: skewX(-45deg) translateX(0);
+  transition: none;
+}
+/* line 37, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.button:hover {
+  background-color: #4EB1BA;
+  color: #fff;
+  border-bottom: 4px solid #3c9199;
+}
+/* line 41, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.button:hover:before {
+  transform: skewX(-45deg) translateX(13.5em);
+  transition: all 0.5s ease-in-out;
+}
+
+/* [1] */
+/* [2] */
+/* [3] */
+/* [4] */
+/* [5] */
+/* [6] */
+/* Styles: */
+/* line 60, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon {
+  position: relative;
+  background: #E9E9E9;
+  cursor: pointer;
+  margin: auto;
+  color: #4EB1BA;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  line-height: 250px;
+  text-align: center;
+  font-size: 2.75em;
+  font-weight: bold;
+  transition: 0.24s 0.2s;
+  margin-bottom: 200px;
+}
+
+/* line 77, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover {
+  background: rgba(233, 233, 233, 0.75);
+}
+
+/* line 81, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.menu {
+  position: absolute;
+  top: -75px;
+  left: -75px;
+  border: 200px solid transparent;
+  cursor: default;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 1.4s 0.07s;
+  z-index: -5;
+  margin-bottom: 150px;
+}
+
+/* line 94, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.spread {
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  transform-origin: 200px 200px;
+  transition: all 0.5s 0.1s;
+  margin-bottom: 150px;
+}
+
+/* line 103, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover {
+  /* Where all the MAGIC happens: */
+}
+/* line 104, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .menu {
+  transition: transform 0.4s 0.08s, z-index   0s  0.5s;
+  transform: scale(1);
+  z-index: 5;
+  margin-bottom: 150px;
+}
+/* line 111, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread, .icon:hover .unit {
+  transition: all 0.6s;
+  margin-bottom: 150px;
+}
+/* line 118, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(1) {
+  transition-delay: 0.02s;
+  transform: rotate(85deg);
+}
+/* line 121, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(1) .unit {
+  transition-delay: 0.04s;
+  transform: rotate(635deg);
+}
+/* line 118, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(2) {
+  transition-delay: 0.04s;
+  transform: rotate(125deg);
+}
+/* line 121, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(2) .unit {
+  transition-delay: 0.08s;
+  transform: rotate(595deg);
+}
+/* line 118, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(3) {
+  transition-delay: 0.06s;
+  transform: rotate(165deg);
+}
+/* line 121, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(3) .unit {
+  transition-delay: 0.12s;
+  transform: rotate(555deg);
+}
+/* line 118, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(4) {
+  transition-delay: 0.08s;
+  transform: rotate(205deg);
+}
+/* line 121, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(4) .unit {
+  transition-delay: 0.16s;
+  transform: rotate(515deg);
+}
+/* line 118, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(5) {
+  transition-delay: 0.1s;
+  transform: rotate(245deg);
+}
+/* line 121, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(5) .unit {
+  transition-delay: 0.2s;
+  transform: rotate(475deg);
+}
+/* line 118, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(6) {
+  transition-delay: 0.12s;
+  transform: rotate(285deg);
+}
+/* line 121, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(6) .unit {
+  transition-delay: 0.24s;
+  transform: rotate(435deg);
+}
+/* line 118, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(7) {
+  transition-delay: 0.14s;
+  transform: rotate(325deg);
+}
+/* line 121, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(7) .unit {
+  transition-delay: 0.28s;
+  transform: rotate(395deg);
+}
+/* line 118, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(8) {
+  transition-delay: 0.16s;
+  transform: rotate(365deg);
+}
+/* line 121, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(8) .unit {
+  transition-delay: 0.32s;
+  transform: rotate(355deg);
+}
+/* line 118, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(9) {
+  transition-delay: 0.18s;
+  transform: rotate(405deg);
+}
+/* line 121, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon:hover .spread:nth-child(9) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(315deg);
+}
+
+/* END .icon:hover */
+/* line 129, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.unit {
+  position: absolute;
+  background: #E9E9E9;
+  font-size: 60%;
+  text-decoration: none;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  color: #4EB1BA;
+  border-radius: 50%;
+  transition: 0.6s;
+}
+
+/* line 144, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+body, a, ul, li {
+  margin: 5;
+  outline: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 144, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+html, body {
+  height: 100%;
+  min-height: 400px;
+}
+
+/* line 144, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+body {
+  font-family: sans-serif;
+  background: radial-gradient(#323c46, #222930);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 145, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.icon {
+  top: 50%;
+  margin-top: -125px;
+  bottom: 50%;
+  margin-top: -125px;
+}
+
+/* line 148, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.color {
+  text-align: center;
+  position: relative;
+  padding-bottom: 30px;
+  color: #CC4331;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 200;
+}
+
+/* line 156, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.box h2 {
+  text-align: center;
+  position: relative;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Exo 2", sans-serif;
+}
+
+/* line 165, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.box {
+  width: 70%;
+  height: auto;
+  background: #FFF;
+  margin: 30px auto;
+}
+
+/* line 172, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.wrapper {
+  position: relative;
+  display: block;
+  margin: auto;
+  text-shadow: center;
+  float: center;
+  padding: 20px;
+}
+
+/*==================================================
+ * Effect 1
+ * ===============================================*/
+/* line 184, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.effect1 {
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+/* line 208, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.startbutton {
+  margin: 20px;
+  display: block;
+  font-size: 22px;
+  text-align: center;
+  line-height: 44px;
+  text-decoration: none;
+  color: white;
+  background-color: #CC4331;
+  border-radius: 4px;
+  border-style: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 124px;
+  height: 44px;
+  margin-top: -44px;
+  margin-left: -62px;
+  text-shadow: 0 -1px -1px #af3a2a;
+  -moz-box-shadow: 0 4px 0 #af3a2a, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 4px 0 #af3a2a, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 0 #af3a2a, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+  -moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+/* line 226, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.startbutton:hover {
+  background-color: #d25544;
+  text-shadow: 0 -1px -1px #c4402f;
+  -moz-box-shadow: 0 4px 0 #c4402f, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 4px 0 #c4402f, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 0 #c4402f, 0 5px 5px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 233, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+.startbutton:active {
+  margin-top: -40px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 246, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+#container {
+  width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+/* line 253, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+#error, #success {
+  width: 800px;
+  height: 80px;
+  margin: 0 20px;
+  padding: 30px;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 5px;
+  color: #fbfbfb;
+}
+/* line 264, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+#error h3, #success h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* line 270, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+#success {
+  background-color: #4EB1BA;
+}
+/* line 273, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/categories.scss */
+#success h3 {
+  color: #178a45;
+  text-shadow: 0 0 2px #daf9e6;
+}
+/* line 1, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+*::after, *::before {
+  content: '';
+}
+
+/* line 11, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+body {
+  font-size: 100%;
+  font-family: 'Muli', sans-serif;
+  color: #4e5359;
+  background-color: #f3f3f5;
+}
+
+/* line 17, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+body::after {
+  /* overlay layer visible on small devices when the right panel slides in */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(78, 83, 89, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+/* line 31, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+body.cd-overlay::after {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 39, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  body::after {
+    display: none;
+  }
+}
+/* line 44, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+a {
+  color: #222930;
+  text-decoration: none;
+}
+
+/* line 48, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.button a {
+  color: white;
+}
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+/* line 57, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+ul {
+  list-style-type: none;
+}
+
+/* line 61, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+header {
+  position: relative;
+  height: 180px;
+  line-height: 180px;
+  text-align: center;
+  background-color: #4EB1BA;
+}
+
+/* line 69, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+header h1 {
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  /* line 77, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  header {
+    height: 240px;
+    line-height: 240px;
+  }
+
+  /* line 81, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  header h1 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    font-weight: 300;
+  }
+}
+/* line 88, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.indexTitle {
+  position: relative;
+  height: 180px;
+  line-height: 180px;
+  text-align: center;
+}
+
+/* line 94, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.indexTitle h1 {
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 36px;
+  font-size: 2.25rem;
+  font-weight: 300;
+}
+
+/* line 103, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.faq {
+  width: 90%;
+  max-width: 1024px;
+  margin: 2em auto;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* line 109, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.faq:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 115, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .faq {
+    position: relative;
+    margin: 4em auto;
+    box-shadow: none;
+  }
+}
+/* line 122, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.faq-items {
+  position: fixed;
+  height: 100%;
+  width: 90%;
+  top: 0;
+  right: 0;
+  background: #ffffff;
+  padding: 0 5% 1em;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0) translateX(100%);
+  -moz-transform: translateZ(0) translateX(100%);
+  -ms-transform: translateZ(0) translateX(100%);
+  -o-transform: translateZ(0) translateX(100%);
+  transform: translateZ(0) translateX(100%);
+  -webkit-transition: -webkit-transform .3s;
+  -moz-transition: -moz-transform .3s;
+  transition: transform .3s;
+}
+
+/* line 144, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.faq-items.slide-in {
+  -webkit-transform: translateZ(0) translateX(0%);
+  -moz-transform: translateZ(0) translateX(0%);
+  -ms-transform: translateZ(0) translateX(0%);
+  -o-transform: translateZ(0) translateX(0%);
+  transform: translateZ(0) translateX(0%);
+}
+
+/* line 151, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.no-js .faq-items {
+  position: static;
+  height: auto;
+  width: 100%;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 162, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .faq-items {
+    position: static;
+    height: auto;
+    width: 78%;
+    float: right;
+    overflow: visible;
+    -webkit-transform: translateZ(0) translateX(0);
+    -moz-transform: translateZ(0) translateX(0);
+    -ms-transform: translateZ(0) translateX(0);
+    -o-transform: translateZ(0) translateX(0);
+    transform: translateZ(0) translateX(0);
+    padding: 0;
+    background: transparent;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 178, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .faq-items {
+    float: none;
+    width: 100%;
+    padding-left: 220px;
+  }
+
+  /* line 183, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .no-js .faq-items {
+    padding-left: 0;
+  }
+}
+/* line 188, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.cd-close-panel {
+  position: fixed;
+  top: 5px;
+  right: -100%;
+  display: block;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  z-index: 2;
+  /* Force Hardware Acceleration in WebKit */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: right 0.4s;
+  -moz-transition: right 0.4s;
+  transition: right 0.4s;
+}
+
+/* line 211, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.cd-close-panel::before, .cd-close-panel::after {
+  /* close icon in CSS */
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  display: inline-block;
+  height: 3px;
+  width: 18px;
+  background: #6c7d8e;
+}
+
+/* line 221, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.cd-close-panel::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 228, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.cd-close-panel::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 235, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.cd-close-panel.move-left {
+  right: 2%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 239, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .cd-close-panel {
+    display: none;
+  }
+}
+/* line 244, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.faq-group {
+  /* hide group not selected */
+  display: none;
+}
+
+/* line 248, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.faq-group.selected {
+  display: block;
+}
+
+/* line 251, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.faq-group .faq-title {
+  background: transparent;
+  box-shadow: none;
+  margin: 1em 0;
+}
+
+/* line 256, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.no-touch .faq-group .faq-title:hover {
+  box-shadow: none;
+}
+
+/* line 259, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.faq-group .faq-title h2 {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #bbbbc7;
+}
+
+/* line 266, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.no-js .faq-group {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 270, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .faq-group {
+    /* all groups visible */
+    display: block;
+  }
+
+  /* line 274, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .faq-group > li {
+    background: #ffffff;
+    margin-bottom: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    -webkit-transition: box-shadow 0.2s;
+    -moz-transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+  }
+
+  /* line 282, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .no-touch .faq-group > li:hover {
+    box-shadow: 0 1px 10px rgba(108, 125, 142, 0.3);
+  }
+
+  /* line 285, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .faq-group .faq-title {
+    margin: 2em 0 1em;
+  }
+
+  /* line 288, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .faq-group:first-child .faq-title {
+    margin-top: 0;
+  }
+}
+/* line 293, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.trigger {
+  position: relative;
+  display: block;
+  margin: 1.6em 0 .4em;
+  line-height: 1.2;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 300, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .trigger {
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0;
+    padding: 24px 72px 24px 24px;
+  }
+
+  /* line 307, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .trigger::before, .trigger::after {
+    /* arrow icon on the right */
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    height: 2px;
+    width: 13px;
+    background: #cfdca0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+  }
+
+  /* line 324, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .trigger::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    right: 32px;
+  }
+
+  /* line 332, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .trigger::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* line 339, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .content-visible .trigger::before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  /* line 346, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .content-visible .trigger::after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+/* line 355, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+.faq-content p {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #6c7d8e;
+}
+
+@media only screen and (min-width: 768px) {
+  /* line 362, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .faq-content {
+    display: none;
+    padding: 0 24px 30px;
+  }
+
+  /* line 366, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .faq-content p {
+    line-height: 1.6;
+  }
+
+  /* line 369, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/questions.scss */
+  .no-js .faq-content {
+    display: block;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+@import url(https://fonts.googleapis.com/css?family=Muli:300);
+@import url(https://fonts.googleapis.com/css?family=Muli);
+/* line 19, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+html {
+  width: 100%;
+  margin: 4px;
+  height: 100%;
+  background: radial-gradient(#323c46, #222930);
+}
+
+/* line 27, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.notice {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 36, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.login-page {
+  width: 360px;
+  padding: 2% 0 0;
+  margin: auto;
+}
+
+/* line 41, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* line 51, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.form input {
+  font-family: "Muli", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* line 62, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.form button {
+  font-family: "Muli", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+/* line 76, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.form button:hover, .form button:active, .form button:focus {
+  background: #43A047;
+}
+
+/* line 79, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+/* line 84, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.form .message a {
+  color: #4EB1BA;
+  text-decoration: none;
+}
+
+/* line 88, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.form .register-form {
+  display: none;
+}
+
+/* line 91, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* line 97, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 102, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* line 106, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+
+/* line 113, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+
+/* line 117, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* line 121, /Users/Prins/Code/Rails/The-Interviewer/app/assets/stylesheets/application.css.scss */
+.container .info span .fa {
+  color: #EF3B3A;
+}
