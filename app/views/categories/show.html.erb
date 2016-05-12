@@ -12,4 +12,4 @@
     </div>
 </div>
 
-<div class="startbutton"><%= link_to 'Start', category_questions_path(@category.id) %></div>
+<%= link_to '<button class="startbutton">Start</button>'.html_safe, category_questions_path(@category.id) %></div>
