@@ -69,4 +69,57 @@ jQuery(document).ready(function($){
 		closeFaqsContainer.removeClass('move-left');
 		$('body').removeClass('cd-overlay');
 	}
+
+	function updateCategory(){
+		updateCategoryPosition();
+		updateSelectedCategory();
+	}
+
+	function updateCategoryPosition() {
+		var top = $('.faq').offset().top,
+			height = jQuery('.faq').height() - jQuery('.categories').height(),
+			margin = 20;
+		if( top - margin <= $(window).scrollTop() && top - margin + height > $(window).scrollTop() ) {
+			var leftValue = faqsCategoriesContainer.offset().left,
+				widthValue = faqsCategoriesContainer.width();
+			faqsCategoriesContainer.addClass('is-fixed').css({
+				'left': leftValue,
+				'top': margin,
+				'-moz-transform': 'translateZ(0)',
+			    '-webkit-transform': 'translateZ(0)',
+				'-ms-transform': 'translateZ(0)',
+				'-o-transform': 'translateZ(0)',
+				'transform': 'translateZ(0)',
+			});
+		} else if( top - margin + height <= $(window).scrollTop()) {
+			var delta = top - margin + height - $(window).scrollTop();
+			faqsCategoriesContainer.css({
+				'-moz-transform': 'translateZ(0) translateY('+delta+'px)',
+			    '-webkit-transform': 'translateZ(0) translateY('+delta+'px)',
+				'-ms-transform': 'translateZ(0) translateY('+delta+'px)',
+				'-o-transform': 'translateZ(0) translateY('+delta+'px)',
+				'transform': 'translateZ(0) translateY('+delta+'px)',
+			});
+		} else {
+			faqsCategoriesContainer.removeClass('is-fixed').css({
+				'left': 0,
+				'top': 0,
+			});
+		}
+	}
+
+	function updateSelectedCategory() {
+		faqsSections.each(function(){
+			var actual = $(this),
+				margin = parseInt($('.faq-title').eq(1).css('marginTop').replace('px', '')),
+				activeCategory = $('.categories a[href="#'+actual.attr('id')+'"]'),
+				topSection = (activeCategory.parent('li').is(':first-child')) ? 0 : Math.round(actual.offset().top);
+
+			if ( ( topSection - 20 <= $(window).scrollTop() ) && ( Math.round(actual.offset().top) + actual.height() + margin - 20 > $(window).scrollTop() ) ) {
+				activeCategory.addClass('selected');
+			}else {
+				activeCategory.removeClass('selected');
+			}
+		});
+	}
 });
