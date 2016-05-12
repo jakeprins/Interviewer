@@ -2,13 +2,7 @@
   <h1>Add a new question to the <%= @question.category.name %> category</h1>
 </header>
 
-<% if !user_signed_in? %>
-  <script type="text/javascript">
-  window.location.href="/users/sign_in"
-  </script>
-<% else %>
-     <%= render "form" %>
-<% end %>
+<%= render "form" %>
 
 <h3 class="button"><%= link_to 'Back', category_path(@category.id) %></h3>
 <h3 class="button"><%= link_to 'Home', root_path %></h3>
