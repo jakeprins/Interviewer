@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_filter :authenticate_user!, except: [:index, :show]
 
   def index
     @categories = Category.all
@@ -12,8 +13,6 @@ class CategoriesController < ApplicationController
     @category = Category.new
   end
 
-
-
   def create
     @category = Category.new( category_params )
       if @category.save
@@ -23,7 +22,6 @@ class CategoriesController < ApplicationController
         render :new, notice: @category.errors.add(:description, "can maximum have 500 characters, so please don't copy a whole wikipedia page in here.")
       end
   end
-
 
   def category_params
     params.require( :category ).permit( :name, :description)
