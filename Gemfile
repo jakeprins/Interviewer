@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby "2.2.4"
 
+gem "jquery-turbolinks"
 gem "dynamic_form"
 gem "factory_girl_rails", "~> 4.0"
 gem 'devise'
